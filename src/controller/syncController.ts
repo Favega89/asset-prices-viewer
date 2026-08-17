@@ -57,12 +57,13 @@ export async function syncPrices(): Promise<Asset[]> {
     getYahooUsdConvertedThroughCedearRatio(notionAssets),
   ]);
 
-  const assets = applyUsdPrices(notionAssets, {
+  const usdBySymbol = {
     ...coinGeckoUsdBySymbol,
     ...yahooUsdBySymbol,
-  });
+  };
+  const assets = applyUsdPrices(notionAssets, usdBySymbol);
 
-  await writeNotionAssetPrices(envConfig.notionToken, assets);
+  await writeNotionAssetPrices(envConfig.notionToken, assets, usdBySymbol);
 
   return assets;
 }

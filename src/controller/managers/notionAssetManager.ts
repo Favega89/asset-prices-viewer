@@ -115,21 +115,29 @@ export function convertAssetsTroughCedearRatio(
   return convertedUsdBySymbol;
 }
 
-// Writes each changed asset price to Notion via PATCH.
+// Writes Price when it changed; always refreshes Last updated on a fresh vendor quote.
 export async function writeNotionAssetPrices(
   integrationToken: string,
   assets: Asset[],
+  usdBySymbol: UsdBySymbol,
 ): Promise<void> {
+  const syncedAt = new Date().toISOString();
+
   for (const asset of assets) {
-    if (!hasAssetPriceChanged(asset)) {
+    if (usdBySymbol[asset.symbol] == null) {
       continue;
     }
 
-    await patchNotionAsset(integrationToken, asset.pageId, {
-      [propertyNames.price]: { number: asset.price },
+    const properties: Record<string, unknown> = {
       [propertyNames.lastUpdated]: {
-        date: { start: new Date().toISOString() },
+        date: { start: syncedAt },
       },
-    });
+    };
+
+    if (hasAssetPriceChanged(asset)) {
+      properties[propertyNames.price] = { number: asset.price };
+    }
+
+    await patchNotionAsset(integrationToken, asset.pageId, properties);
   }
 }

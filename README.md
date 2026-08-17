@@ -57,7 +57,7 @@ Para probar: pestaña **Actions** → **Sync prices** → **Run workflow**.
 1. Lee assets desde Notion (`Symbol`, `Type`, `Source`, `Price`, `CEDEAR Ratio`).
 2. Pide USD a CoinGecko (source `CoinGecko`) y Yahoo (source `Yahoo`) en paralelo. Si un vendor falla, el sync sigue con el otro.
 3. Para quotes Yahoo con `CEDEAR Ratio` > 0, convierte a precio por certificado (`USD ÷ ratio`). Crypto y acciones sin ratio quedan en USD crudo.
-4. Escribe `Price` y `Last updated` solo cuando el precio cambió.
+4. Escribe `Price` solo si cambió; `Last updated` en cada quote fresco del vendor.
 5. Lista el resultado en consola.
 
 ## Estructura
