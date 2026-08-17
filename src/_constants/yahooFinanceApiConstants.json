@@ -1,0 +1,23 @@
+{
+  "label": "Yahoo",
+  "chartBaseUrl": "https://query1.finance.yahoo.com/v8/finance/chart",
+  "tickerBySymbol": {
+    "AAPL": "AAPL",
+    "AMD": "AMD",
+    "BABA": "BABA",
+    "CVX": "CVX",
+    "DIA": "DIA",
+    "GLOB": "GLOB",
+    "INTC": "INTC",
+    "KO": "KO",
+    "LOMA": "LOMA",
+    "MELI": "MELI",
+    "MSFT": "MSFT",
+    "PAM": "PAM",
+    "PFE": "PFE",
+    "QQQ": "QQQ",
+    "SPY": "SPY",
+    "TSLA": "TSLA",
+    "YPF": "YPF"
+  }
+}

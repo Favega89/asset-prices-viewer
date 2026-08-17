@@ -1,0 +1,18 @@
+{
+  "label": "CoinGecko",
+  "simplePriceUrl": "https://api.coingecko.com/api/v3/simple/price",
+  "idBySymbol": {
+    "BTC": "bitcoin",
+    "ETH": "ethereum",
+    "SOL": "solana",
+    "BNB": "binancecoin",
+    "XRP": "ripple",
+    "TON": "the-open-network",
+    "SUSHI": "sushi",
+    "LINK": "chainlink",
+    "AAVE": "aave",
+    "FET": "fetch-ai",
+    "ARB": "arbitrum",
+    "POL": "polygon-ecosystem-token"
+  }
+}
