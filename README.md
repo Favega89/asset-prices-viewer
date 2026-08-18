@@ -4,6 +4,13 @@
 
 # asset-prices-viewer
 
+<p align="center">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/node-%3E%3D20-339933?logo=nodedotjs&logoColor=white" alt="Node.js 20+">
+  <img src="https://img.shields.io/badge/GitHub_Actions-cron-2088FF?logo=githubactions&logoColor=white" alt="GitHub Actions">
+  <img src="https://img.shields.io/badge/License-MIT-yellow" alt="MIT License">
+</p>
+
 Sync de precios USD (crypto vía CoinGecko, stocks/ETFs vía Yahoo Finance) hacia una base de Notion. Los CEDEARs usan `CEDEAR Ratio` para guardar el precio por certificado.
 
 ## Preview
