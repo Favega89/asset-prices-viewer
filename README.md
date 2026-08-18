@@ -1,6 +1,19 @@
+<p align="center">
+  <img src="docs/logo.png" alt="asset-prices-viewer logo" width="128" height="128">
+</p>
+
 # asset-prices-viewer
 
 Sync de precios USD (crypto vía CoinGecko, stocks/ETFs vía Yahoo Finance) hacia una base de Notion. Los CEDEARs usan `CEDEAR Ratio` para guardar el precio por certificado.
+
+## Preview
+
+Consola local (`npm run dev`) y la base de precios en Notion después del sync:
+
+<p align="center">
+  <img src="docs/sync-cli.png" alt="CLI output listing 29 synced assets" width="420">
+  <img src="docs/notion-prices.png" alt="Notion prices table after sync" width="520">
+</p>
 
 ## Requisitos
 
@@ -67,6 +80,10 @@ asset-prices-viewer/
 ├── .github/
 │   └── workflows/
 │       └── sync-prices.yml
+├── docs/
+│   ├── logo.png
+│   ├── notion-prices.png
+│   └── sync-cli.png
 ├── src/
 │   ├── api/
 │   │   ├── utils/
